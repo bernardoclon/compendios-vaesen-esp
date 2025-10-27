@@ -111,5 +111,8 @@
       },
       "system": "vaesen"
     }
-  ]
+  ],
+  "url": "https://raw.githubusercontent.com/bernardoclon/compendios-vaesen-esp",
+  "manifest": "https://raw.githubusercontent.com/bernardoclon/compendios-vaesen-esp/refs/heads/main/module.json",
+  "download": "https://github.com/bernardoclon/compendios-vaesen-esp/archive/refs/tags/V1-0.zip"
 }
