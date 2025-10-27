@@ -1,0 +1,8 @@
+2025/10/26-21:24:11.094 15fc Recovering log #665
+2025/10/26-21:24:11.094 15fc Delete type=0 #665
+2025/10/26-21:24:11.094 15fc Delete type=3 #664
+2025/10/26-21:41:50.414 35dc Level-0 table #669: started
+2025/10/26-21:41:50.414 35dc Level-0 table #669: 0 bytes OK
+2025/10/26-21:41:50.417 35dc Delete type=0 #667
+2025/10/26-21:41:50.425 35dc Manual compaction at level-0 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes!tBlCJMAvCQmE0Ymo' @ 0 : 0; will stop at (end)
+2025/10/26-21:41:50.425 35dc Manual compaction at level-1 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes!tBlCJMAvCQmE0Ymo' @ 0 : 0; will stop at (end)
