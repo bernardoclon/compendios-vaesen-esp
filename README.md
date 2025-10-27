@@ -1,9 +1,9 @@
-🖋️ Mi Diario de Casos (Uso Estrictamente Personal)
+## 🖋️ Mi Diario de Casos (Uso Estrictamente Personal)
 ¡Atención, Iniciado! Esto no es una publicación de Free League Publishing o de cualquier sociedad oficial, sino mi diario de investigación personal y privado, la única copia de mis conocimientos sobre los secretos de la Utopía y los horrores que se esconden en el Norte.
 
 Este es un compendio de reglas y material de apoyo que he seleccionado y organizado meticulosamente, presentado en español y diseñado específicamente para las gélidas crónicas de Vaesen: El Juego de Rol de Mesa. Insisto: este material es solo mío, creado y mantenido para mi uso exclusivo como Director de Juego (Game Master o GM) y queda totalmente prohibida su difusión, venta o reproducción pública. Es un registro sensible de la Sociedad y sus misterios.
 
-🔒 Mi Archivo Confidencial de Casos Nórdicos y Británicos
+## 🔒 Mi Archivo Confidencial de Casos Nórdicos y Británicos
 ¡Advertencia de Confidencialidad! Esto no es un producto que pueda adquirirse o descargarse. Es mi obra de traducción personal y privada, el resultado de mi dedicación a llevar las crónicas de Vaesen: El Juego de Rol de Mesa al español.
 
 Este es un Módulo Integrado de Contenido que he creado exclusivamente para mi uso como Director de Juego (Game Master o GM). En estas páginas he consolidado, traducido y maquetado yo mismo, el contenido completo de los suplementos oficiales de Free League: Estaciones del Misterio, La Saga de la Montaña, y Gran Bretaña e Irlanda Míticas.
