@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div align="center">
 
 ## 🖋️ Mi Diario de Casos (Uso Estrictamente Personal)
 ¡Atención, Iniciado! Esto no es una publicación de Free League Publishing o de cualquier sociedad oficial, sino mi diario de investigación personal y privado, la única copia de mis conocimientos sobre los secretos de la Utopía y los horrores que se esconden en el Norte.
