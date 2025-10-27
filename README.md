@@ -1,3 +1,5 @@
+<div style="text-align: center">
+
 ## 🖋️ Mi Diario de Casos (Uso Estrictamente Personal)
 ¡Atención, Iniciado! Esto no es una publicación de Free League Publishing o de cualquier sociedad oficial, sino mi diario de investigación personal y privado, la única copia de mis conocimientos sobre los secretos de la Utopía y los horrores que se esconden en el Norte.
 
@@ -17,3 +19,5 @@ Contenido de Ambientación: Todos los nuevos entornos (como Londres, la Sociedad
 Antagonistas y Reglas Suplementarias: La traducción de todas las criaturas Vaesen adicionales, nuevos Talentos, Capas de Misterio y sistemas suplementarios presentados en dichos volúmenes.
 
 Permíteme ser enfático: Este documento es único. Es imposible que se pueda descargar, comprar u obtener de cualquier otra fuente, ya que está creado y mantenido solo para mi uso exclusivo en mi mesa de juego privada, sirviendo como la herramienta definitiva para mis crónicas. Es mi biblioteca personal, mi tesoro de la Utopía.
+
+</div>
