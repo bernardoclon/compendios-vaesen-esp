@@ -1,4 +1,5 @@
 <div align="center">
+<img width="920" height="250" alt="logo" src="https://github.com/user-attachments/assets/dff388a3-b3f5-4b41-9d01-52f7660d5595" />
 
 ## 🖋️ Mi Diario de Casos (Uso Estrictamente Personal)
 ¡Atención, Iniciado! Esto no es una publicación de Free League Publishing o de cualquier sociedad oficial, sino mi diario de investigación personal y privado, la única copia de mis conocimientos sobre los secretos de la Utopía y los horrores que se esconden en el Norte.
