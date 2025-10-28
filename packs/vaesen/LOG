@@ -1,0 +1,7 @@
+2025/10/27-19:36:24.803 1cd8 Recovering log #1323
+2025/10/27-19:36:24.810 1cd8 Delete type=0 #1323
+2025/10/27-19:36:24.810 1cd8 Delete type=3 #1321
+2025/10/27-19:44:22.057 168 Level-0 table #1328: started
+2025/10/27-19:44:22.057 168 Level-0 table #1328: 0 bytes OK
+2025/10/27-19:44:22.060 168 Delete type=0 #1326
+2025/10/27-19:44:22.060 168 Manual compaction at level-0 from '!actors!2I2RcSNsb6beQ8ZK' @ 72057594037927935 : 1 .. '!actors.items!yC8uz7xlYjDjUriA.uvn2EUDwfSpLHYKf' @ 0 : 0; will stop at (end)

@@ -1,0 +1,15 @@
+2025/10/27-19:36:24.853 cdc Recovering log #785
+2025/10/27-19:36:24.860 cdc Delete type=0 #785
+2025/10/27-19:36:24.860 cdc Delete type=3 #783
+2025/10/27-19:44:22.126 168 Level-0 table #790: started
+2025/10/27-19:44:22.134 168 Level-0 table #790: 197217 bytes OK
+2025/10/27-19:44:22.136 168 Delete type=0 #788
+2025/10/27-19:44:22.141 168 Manual compaction at level-0 from '!adventures!8k9NKigA2t6jYjuA' @ 72057594037927935 : 1 .. '!adventures!mxmIRvsmno23ovHR' @ 0 : 0; will stop at (end)
+2025/10/27-19:44:22.163 168 Manual compaction at level-1 from '!adventures!8k9NKigA2t6jYjuA' @ 72057594037927935 : 1 .. '!adventures!mxmIRvsmno23ovHR' @ 0 : 0; will stop at '!adventures!mxmIRvsmno23ovHR' @ 116 : 1
+2025/10/27-19:44:22.163 168 Compacting 1@1 + 1@2 files
+2025/10/27-19:44:22.172 168 Generated table #791@1: 4 keys, 250563 bytes
+2025/10/27-19:44:22.172 168 Compacted 1@1 + 1@2 files => 250563 bytes
+2025/10/27-19:44:22.175 168 compacted to: files[ 0 0 1 0 0 0 0 ]
+2025/10/27-19:44:22.175 168 Delete type=2 #776
+2025/10/27-19:44:22.175 168 Delete type=2 #790
+2025/10/27-19:44:22.193 168 Manual compaction at level-1 from '!adventures!mxmIRvsmno23ovHR' @ 116 : 1 .. '!adventures!mxmIRvsmno23ovHR' @ 0 : 0; will stop at (end)
