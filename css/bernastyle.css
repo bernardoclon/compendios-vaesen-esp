@@ -40,12 +40,6 @@
   src: url(../fonts/IMFellDoublePica-Italic.ttf);
 }
 
-/* Forzar modo claro en el editor de texto */
-.editor-content,
-.editor-content .ProseMirror {
-  background: #fff !important;
-  color: #222 !important;
-}
 @font-face {
   font-family: Pica;
   src: url(../fonts/IMFellDoublePica-Regular.ttf);
@@ -128,16 +122,36 @@ body {
 .sheet.journal-entry .journal-entry-content {
   background: white;
   color: black;
-  padding: 10px;
-}
+  } 
 
 .journal-entry img {
   border: none;
 }
 
-.journal-sheet .window-content {
-  background: rgb(0, 0, 0);
+.journal-sheet.journal-entry-page.text .window-content {
+  background-color: white;
+  font-family: Lin;
+}
+
+.prosemirror .editor-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+  border: solid 4px black;
+  border-radius: 10px;
+}
+
+.prosemirror .editor-content {
+  height: 100%;
+  padding: 3%;
+  overflow-y: auto;
+}
+
+.journal-sheet .window-content .light-theme{
   padding: 10px;
+  background: white;
+  color: black;
+  font-family: Lin;
 }
 
 .journal-sheet img {
@@ -159,6 +173,8 @@ body {
 
 .journal-container p{
   text-align: justify;
+  line-height: 2em;
+  padding: 2%;
 }
 
 .journal-spacer {
@@ -197,9 +213,9 @@ body {
 }
 
 .two-col {
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
+  margin-top: 3%;
+  margin-right: 3%;
+  margin-left: 3%;
   text-align: justify;
   overflow: hidden;
   overflow-wrap: break-word;
@@ -255,27 +271,6 @@ body {
   margin-top: 10px;
 }
 
-.editor-content {
-  font-size: 0.9rem;
-}
-.editor-content .flavor-text {
-  background: #f1e4df;
-  width: 33%;
-  border: 20px solid transparent;
-  padding: 0px;
-  margin: 10px;
-  border-image: url(../assets/ft_border.png) 15 round;
-  color: #412017;
-  font-family: Lin;
-  font-size: 0.8em;
-  font-weight: 400;
-  text-align: justify;
-  line-height: 1.5em;
-  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
-  page-break-inside: avoid; /* Firefox */
-  break-inside: avoid; /* IE 10+ */
-}
-
 .ft-head {
   font-family: Lin;
   font-size: 1.2em;
@@ -284,50 +279,6 @@ body {
   text-transform: uppercase;
 }
 /****** heading formating ******/
-
-/****** heading formating ******/
-.editor-content h1,
-.journal-entry-content h1 {
-  font-family: Albertus;
-  font-size: 3em;
-  text-align: center;
-  color: #412017;
-  border-bottom: none;
-}
-
-.editor-content h2,
-.journal-entry-content h2 {
-  font-family: Eccentric;
-  font-size: 2.5em;
-  text-align: center;
-  color: #412017;
-  font-weight: 700;
-  border-bottom: none;
-  margin-bottom: 5%;
-}
-
-.editor-content h3,
-.journal-entry-content h3 {
-  font-family: Lin;
-  font-size: 1.4em;
-  text-transform: uppercase;
-  color: #412017;
-  font-weight: 600;
-  text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
-}
-
-.editor-content h4,
-.journal-entry-content h4 {
-  font-family: Lin;
-  font-size: 0.9em;
-  text-transform: uppercase;
-  color: #412017;
-  font-weight: 400;
-  text-align: center;
-  margin-top: 5px;
-}
 
 .talent-border {
   border: 14px solid transparent;
@@ -488,432 +439,6 @@ table {
   border-top: hidden;
   word-break: keep-all;
 }
-/***** Vaesen system overrides ******/
-.vaesen.item .upgrade .icon {
-  border: none;
-}
-
-.vaesen.item .armor .icon {
-  border: none;
-}
-.vaesen.item .weapon .icon {
-  border: none;
-}
-
-.vaesen.item .gear .icon {
-  border: none;
-}
-
-.vaesen.item .magic .icon {
-  border: none;
-}
-
-.vaesen.item .talent .icon {
-  border: none;
-}
-
-.vaesen.item .critical-injury .icon {
-  border: none;
-}
-
-.vaesen.item .condition .icon {
-  border: none;
-}
-.vaesen.item .attack .icon {
-  border: none;
-}
-
-.vaesen .wrapper:last-child {
-  margin-bottom: 20px;
-}
-
-.vaesen .sheet-tabs {
-  background-color: #f9f8f6;
-  margin-bottom: 0px;
-}
-
-.vaesen .tabs .item.active {
-  text-shadow: none;
-  border-bottom: 1px solid #412017;
-  color: #412017;
-}
-
-.vaesen .tabs .item {
-  text-shadow: none;
-  border-bottom: 1px solid #af9c8d;
-  color: #af9c8d;
-}
-
-input {
-  filter: drop-shadow(1px 1px 0px #41201766);
-}
-
-.vaesen .player,
-.vaesen .headquarter,
-.vaesen .dialog {
-  background: #f9f8f6;
-  margin: -10px;
-  margin-right: 0px;
-  padding: 8px;
-}
-
-.vaesen .portrait {
-  width: 224px;
-  height: 275px;
-  justify-content: space-between;
-}
-
-.attribute {
-  border-bottom: 1px solid #412017;
-  padding-bottom: 3px;
-}
-.vaesen .player .conditions b.condition,
-.vaesen .player .conditions div.condition {
-  flex-basis: 100%;
-  border: 1px solid #826657;
-  margin-left: 25px;
-  margin-right: 25px;
-  margin-top: 2px;
-  background-color: #d6c9c2;
-}
-
-.vaesen .player .skills .attribute input {
-  font-family: Lin, sans-serif;
-  margin-right: 12px;
-}
-
-.vaesen .left-block {
-  width: 65%;
-  margin-bottom: 3px;
-}
-
-.vaesen .right-block {
-  width: 35%;
-  margin-bottom: 3px;
-}
-
-.vaesen .player .skills .attribute b:hover {
-  text-shadow: 0px 3px 5px #af9c8d;
-  cursor: pointer;
-}
-
-.vaesen .player .skills .skill b:hover {
-  text-shadow: 0px 3px 5px #af9c8d;
-  cursor: pointer;
-}
-
-.vaesen .heavy-border {
-  border: 2px solid #ae9d8d;
-  margin: 4px;
-  padding: 3px;
-  background-color: #ebe6e4;
-}
-
-.vaesen .second {
-  width: 470px;
-  align-content: center;
-}
-
-.vaesen .headquarter .second {
-  width: 235px;
-}
-
-.vaesen .logo img {
-  border: none;
-  width: 40%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.vaesen .logo {
-  flex-basis: 90%;
-}
-
-.vaesen .bio {
-  flex-basis: 80%;
-  margin-bottom: 2px;
-}
-
-.motivation,
-.trauma,
-.dark-secret,
-.advantage,
-.memento {
-  width: 100%;
-}
-.vaesen .res {
-  flex-basis: 20%;
-  margin-bottom: 2px;
-}
-
-.vaesen .player .header .img-frame {
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  width: 175px;
-  height: 175px;
-}
-
-.vaesen .player .header .profile-frame {
-  position: absolute;
-  z-index: 1;
-  border: none;
-}
-.vaesen .player .header .profile-img {
-  position: absolute;
-  border: 1px transparent;
-  margin-top: 5px;
-  border-radius: 50%;
-  z-index: 2;
-  padding: 15px;
-}
-
-.vaesen .player .header b,
-.vaesen .headquarter .header b {
-  font-family: Pica;
-  color: #ae9d8d;
-  margin-left: 10px;
-  font-size: 0.9em;
-  margin-bottom: 2px;
-}
-.vaesen .player .header .name input,
-.vaesen .headquarter .header .name input {
-  font-family: Albertus, sans-serif;
-  font-size: 1.2em;
-  padding: 0px;
-  margin-left: 1px;
-  margin-right: 3px;
-  flex-basis: 30%;
-  margin-bottom: 3px;
-  text-align: center;
-  height: 2.5em;
-}
-
-.vaesen .player .header .name,
-.vaesen .headquarter .header .name {
-  position: relative;
-  max-height: 3em;
-}
-
-.vaesen .player .header .name b,
-.vaesen .headquarter .header .name b {
-  position: absolute;
-  top: 0px;
-  visibility: hidden;
-}
-
-.vaesen .player .header .archetype {
-  position: relative;
-  max-height: 2em;
-  align-self: flex-end;
-  margin-bottom: 20px;
-}
-.vaesen .headquarter .header .building {
-  position: relative;
-  max-height: 2em;
-  align-self: flex-end;
-  margin-bottom: 20px;
-}
-
-.skill-group div:nth-child(odd) {
-  background: #c4b8b3;
-  padding: 3px;
-}
-
-.dice-pool-list div:nth-child(odd) {
-  background: #c4b8b3;
-  padding: 3px;
-}
-
-input[type="text"]:focus {
-  box-shadow: inset 0 0 4px #b39894;
-}
-.vaesen .talent {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-
-.vaesen .magic {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-.vaesen .attack {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-
-.vaesen .gear {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-
-.vaesen .armor {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-
-.vaesen .hdqtr {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-  margin-bottom: 0px;
-}
-
-.vaesen .weapon {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-
-.vaesen .critical-injury {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-.vaesen .condition {
-  background: url(../assets/lined_paper.jpg);
-  margin: -10px;
-  padding: 8px;
-}
-.vaesen .conditions .condition {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.vaesen .critical-injuries .critical-injury {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-.vaesen .talents .talent {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-.vaesen .attacks .attack {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.vaesen .weapons .weapon {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.vaesen .magics .magic {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.vaesen .gears .gear {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-
-.vaesen .player .note .editor,
-.vaesen .player .note .editor-content {
-  max-height: none;
-}
-
-/****** Favorite Items ******/
-.vaesen .favorite.armor {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-  justify-content: space-between;
-  margin-top: 2px;
-}
-.vaesen .favorite.weapon {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-  justify-content: space-between;
-  margin-top: 2px;
-}
-.vaesen .player .favorites .scrollable {
-  height: fit-content;
-}
-
-.vaesen .player .favorite.armor img.icon {
-  border: 0;
-  width: 25px;
-  height: 25px;
-}
-
-.vaesen .player .favorite.weapon img.icon {
-  border: 0;
-  width: 25px;
-  height: 25px;
-}
-
-/****** Combat Tab Player Character Sheet ******/
-
-.vaesen .player .critical-injuries .scrollable {
-  height: fit-content;
-}
-
-.vaesen .player .critical-injuries .critical-injury img.icon {
-  border: 0;
-  width: 25px;
-  height: 25px;
-}
-
-.vaesen .player .weapons .scrollable {
-  height: fit-content;
-}
-
-.vaesen .player .weapons .weapon img.icon {
-  border: 0;
-  width: 25px;
-  height: 25px;
-}
-
-.vaesen .armors .armor {
-  background: none;
-  margin: 0px;
-  padding: 0px;
-}
-.vaesen .player .armors .scrollable {
-  height: fit-content;
-}
-
-.vaesen .player .armors .armor img.icon {
-  border: 0;
-  width: 25px;
-  height: 25px;
-}
-/****** Talents Tab Character Sheet ******/
-
-.vaesen .player .talents .scrollable {
-  height: fit-content;
-}
-
-.vaesen .player .talents .talent img.icon {
-  border: 0;
-  width: 25px;
-  height: 25px;
-}
-
-/****** Gear Tab Character Sheet ******/
-.vaesen .player .gears .scrollable {
-  height: fit-content;
-}
-
-.vaesen .player .gears .gear img.icon {
-  border: 0;
-  width: 25px;
-  height: 25px;
-}
 
 /****** Foundry Overrides ******/
 
@@ -938,6 +463,7 @@ h3,
 h4 {
   font-family: Albertus, serif;
   border-bottom: none;
+  padding: 2% 0;
 }
 
 .chat-message {
@@ -1143,4 +669,3 @@ h4 {
   object-fit: contain;
   display: block;
 }
-

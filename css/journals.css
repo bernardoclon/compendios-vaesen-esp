@@ -1,0 +1,115 @@
+/* Journals */
+
+.journal-entry:not(.minimized) hr {
+  border: none;
+  border-top: 2px solid #000000;
+  margin: 1em 0; 
+}
+
+.journal-sheet.journal-entry .journal-header {
+  display: none !important;
+}
+
+.journal-entry:not(.minimized) .window-header {
+  font-family: 'Oswald', sans-serif;
+  font-size: 5px;
+  text-align: left !important;
+}
+
+.journal-sheet.journal-entry .journal-entry-content {
+  padding: 5% 1% 1% 1%;
+}
+
+.journal-entry:not(.minimized) {
+  border-image: url(../Art/borderj.png);
+  border-image-slice: 100;
+  border-image-width: 42px;
+  border-image-outset: 42px;
+  border-image-repeat: round;
+  border-style: solid;
+  
+}
+
+.journal-entry:not(.minimized) .window-header {
+  border: none;
+  background-color: initial;
+  flex-basis: 24px;
+  align-content: center;
+  margin-top: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  width: 100%;
+}
+.journal-entry:not(.minimized) .window-header .configure-sheet {
+  display: none !important;
+}
+.journal-entry:not(.minimized) .window-header * {
+  text-shadow: 0 0 0.5em black;
+}
+.journal-entry:not(.minimized) .window-header *:not(.window-title):hover {
+  text-shadow: 0 0 0.5em var(--color-shadow-primary);
+}
+.journal-entry:not(.minimized) .decoration,
+.journal-entry:not(.minimized) .header-button.close,
+.journal-entry:not(.minimized) .header-button.close::before {
+  position: absolute;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 0 0.1em rgba(0, 0, 0, 0.5));
+}
+.journal-entry:not(.minimized) .header-button.close {
+  top: -39px;
+  right: -39px;
+  z-index: 2;
+  width: 24px;
+  height: 24px;
+  font-size: 0;
+  margin: 0;
+  background-image: url(../Art/close.png);
+  filter: drop-shadow(0 0 5px black) drop-shadow(0 0 2px #6b081c);
+}
+.journal-entry:not(.minimized) .header-button.close::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  border-radius: 100vmax;
+  background: rgba(90, 0, 0, 0.1);
+}
+.journal-entry:not(.minimized) .header-button.close:hover {
+  filter: drop-shadow(0 0 5px #6b081c) drop-shadow(0 0 5px black);
+}
+.journal-entry:not(.minimized) .decoration {
+  z-index: 1;
+  pointer-events: none;
+}
+.journal-entry:not(.minimized) .corner-ul {
+  top: -28px;
+  left: -28px;
+  width: 52px;
+  height: 66px;
+}
+.journal-entry:not(.minimized) .corner-br {
+  bottom: -28px;
+  right: -28px;
+  width: 52px;
+  height: 66px;
+}
+.journal-entry:not(.minimized) .corner-ur {
+  top: -52px;
+  right: -61px;
+  width: 358px;
+  height: 200px;
+}
+.journal-entry:not(.minimized) .corner-bl {
+  bottom: -43px;
+  left: -65px;
+  width: 225.2px;
+  height: 206.8px;
+  z-index: 1;
+}
+

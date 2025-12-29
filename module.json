@@ -31,7 +31,10 @@
   "styles": [
     {
       "src": "css/bernastyle.css"
-    }
+    },
+    {
+      "src": "css/journals.css"
+    }	
   ],
   "packs": [
     {
