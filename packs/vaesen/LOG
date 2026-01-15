@@ -1,7 +1,0 @@
-2025/12/29-02:25:31.208 3704 Recovering log #1403
-2025/12/29-02:25:31.212 3704 Delete type=0 #1403
-2025/12/29-02:25:31.212 3704 Delete type=3 #1401
-2025/12/29-02:49:35.880 3958 Level-0 table #1408: started
-2025/12/29-02:49:35.880 3958 Level-0 table #1408: 0 bytes OK
-2025/12/29-02:49:35.882 3958 Delete type=0 #1406
-2025/12/29-02:49:35.884 3958 Manual compaction at level-0 from '!actors!2I2RcSNsb6beQ8ZK' @ 72057594037927935 : 1 .. '!actors.items!yC8uz7xlYjDjUriA.uvn2EUDwfSpLHYKf' @ 0 : 0; will stop at (end)

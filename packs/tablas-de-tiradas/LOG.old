@@ -1,7 +1,0 @@
-2025/12/29-01:58:09.909 24a4 Recovering log #1385
-2025/12/29-01:58:09.913 24a4 Delete type=0 #1385
-2025/12/29-01:58:09.913 24a4 Delete type=3 #1383
-2025/12/29-01:59:42.179 3958 Level-0 table #1390: started
-2025/12/29-01:59:42.179 3958 Level-0 table #1390: 0 bytes OK
-2025/12/29-01:59:42.180 3958 Delete type=0 #1388
-2025/12/29-01:59:42.181 3958 Manual compaction at level-0 from '!tables!FRSG97qT44t0Bszw' @ 72057594037927935 : 1 .. '!tables.results!vENw7M3K3nSOYbp5.zc1ujWN2rJyEMkvu' @ 0 : 0; will stop at (end)
