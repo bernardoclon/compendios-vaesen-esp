@@ -1,0 +1,1146 @@
+/******************************
+/        Fonts
+******************************/
+@font-face {
+  font-family: Eccentric;
+  src: url(../fonts/EccentricStd.otf);
+}
+
+@font-face {
+  font-family: BethEllen;
+  src: url(../fonts/BethEllen-Regular.ttf);
+}
+
+@font-face {
+  font-family: Albertus;
+  src: url(../fonts/AlbertusMediumRegular.ttf);
+}
+@font-face {
+  font-family: Baskerville;
+  src: url(../fonts/LibreBaskerville-Regular.ttf);
+}
+
+@font-face {
+  font-family: Lin;
+  src: url(../fonts/LinLibertine_R.ttf);
+}
+
+@font-face {
+  font-family: IntervogueBlack;
+  src: url("../fonts/Intervogue_Black.otf");
+}
+
+@font-face {
+  font-family: IntervogueReg;
+  src: url("../fonts/Intervogue_Reg.otf");
+}
+
+@font-face {
+  font-family: PicaItalic;
+  src: url(../fonts/IMFellDoublePica-Italic.ttf);
+}
+
+/* Forzar modo claro en el editor de texto */
+.editor-content,
+.editor-content .ProseMirror {
+  background: #fff !important;
+  color: #222 !important;
+}
+@font-face {
+  font-family: Pica;
+  src: url(../fonts/IMFellDoublePica-Regular.ttf);
+}
+
+/* Logo de Pausa Cambiado y Titilante*/
+
+img.fa-spin {
+    width: 200px; /* Ajusta el tamaño */
+    height: 200px;
+    animation: pulsate 3s infinite ease-in-out, none !important; /* Añade el parpadeo */
+    opacity: 1; /* Transparencia inicial */
+  }
+  
+  @keyframes pulsate {
+    0% {
+        filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+    }
+    50% {
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
+    }
+    100% {
+        filter: drop-shadow(0 0 0 rgba(255, 255, 255, 0));
+    }
+  }
+  
+  #pause figcaption {
+    font-family: Eccentric, sans-serif;
+    font-size: 42px;
+    text-shadow: 0px 3px 5px #e4f0f4;
+    color: #222421;
+  }
+  
+  #pause {
+    background: none !important;
+  }
+
+  #navigation {
+    margin-left: 85px;
+  }
+
+  /****** global overrides ******/
+
+/****** links and hover styles ******/
+
+a.entity-link {
+  background: transparent;
+  color: #412017;
+  border-radius: 1px;
+  border: none;
+  font-family: Lin;
+  font-size: inherit;
+  font-style: normal;
+  padding: 1px 1px;
+  text-indent: 0px;
+}
+
+a.entity-link i {
+  color: #412017;
+}
+
+a:hover {
+  text-shadow: 0px 3px 5px rgba(229, 231, 152, 1);
+}
+
+/****** Default Background ******/
+
+body {
+  background-image: url("../assets/bg.jpg");
+  background-repeat: repeat-y;
+  background-size: 100%;
+}
+
+/****** Journal Entries ******/
+
+.sheet {
+  --color-border-highlight: #f1efec;
+}
+
+.sheet.journal-entry .journal-entry-content {
+  background: white;
+  color: black;
+  padding: 10px;
+}
+
+.journal-entry img {
+  border: none;
+}
+
+.journal-sheet .window-content {
+  background: rgb(0, 0, 0);
+  padding: 10px;
+}
+
+.journal-sheet img {
+  border: none;
+}
+
+.journal-sheet form select {
+  visibility: hidden;
+}
+
+.journal-sheet form input[name="name"] {
+  font-size: 20px;
+  height: 25px;
+  line-height: 25px;
+  background: none;
+  color: #412017;
+  border: none;
+}
+
+.journal-container p{
+  text-align: justify;
+}
+
+.journal-spacer {
+  margin: 5% 0;
+  font-weight: bold;
+  text-wrap: wrap;
+}
+
+.journal-container img{
+  margin: 5% 0;
+}
+
+.lore-text {
+  font-family: BethEllen, cursive;
+  font-size: -1em;
+  word-spacing: -2px;
+  line-height: 125%;
+  margin: 5px;
+}
+
+.lead-text {
+  font-family: Baskerville, sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+  font-size: 0.8em;
+}
+
+.att-text {
+  font-family: Lin;
+}
+.chapter-text {
+  font-family: Albertus;
+  font-size: 3em;
+  text-align: center;
+  color: #412017;
+}
+
+.two-col {
+  margin-top: 10px;
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: justify;
+  overflow: hidden;
+  overflow-wrap: break-word;
+}
+
+.rotated-text {
+  position: relative;
+  left: 45px;
+  width: 85%;
+  transform: translateX (45px);
+  transform: rotate(-3deg);
+  padding-top: 15px;
+}
+.quote-text {
+  font-family: PicaItalic;
+  padding: 5px;
+  text-indent: 0px;
+}
+
+.cw-text {
+  text-align: left;
+  font-size: 0.7em;
+  font-family: IntervogueBlack;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.example-text {
+  border-right: 1px solid #412017;
+  border-left: 1px solid #412017;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-family: PicaItalic;
+}
+.section-head {
+  font-family: Eccentric;
+  font-size: 2.5em;
+  text-align: center;
+  color: #412017;
+  font-weight: 700;
+}
+.sub-head {
+  font-family: Lin;
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: #412017;
+  font-weight: 600;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.editor-content {
+  font-size: 0.9rem;
+}
+.editor-content .flavor-text {
+  background: #f1e4df;
+  width: 33%;
+  border: 20px solid transparent;
+  padding: 0px;
+  margin: 10px;
+  border-image: url(../assets/ft_border.png) 15 round;
+  color: #412017;
+  font-family: Lin;
+  font-size: 0.8em;
+  font-weight: 400;
+  text-align: justify;
+  line-height: 1.5em;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+}
+
+.ft-head {
+  font-family: Lin;
+  font-size: 1.2em;
+  font-weight: 800;
+  text-align: center;
+  text-transform: uppercase;
+}
+/****** heading formating ******/
+
+/****** heading formating ******/
+.editor-content h1,
+.journal-entry-content h1 {
+  font-family: Albertus;
+  font-size: 3em;
+  text-align: center;
+  color: #412017;
+  border-bottom: none;
+}
+
+.editor-content h2,
+.journal-entry-content h2 {
+  font-family: Eccentric;
+  font-size: 2.5em;
+  text-align: center;
+  color: #412017;
+  font-weight: 700;
+  border-bottom: none;
+  margin-bottom: 5%;
+}
+
+.editor-content h3,
+.journal-entry-content h3 {
+  font-family: Lin;
+  font-size: 1.4em;
+  text-transform: uppercase;
+  color: #412017;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+
+.editor-content h4,
+.journal-entry-content h4 {
+  font-family: Lin;
+  font-size: 0.9em;
+  text-transform: uppercase;
+  color: #412017;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.talent-border {
+  border: 14px solid transparent;
+  border-bottom: 14px solid black;
+  padding: 0px;
+  border-image: url(../assets/journal-art/04/stebbed_bottom.svg)
+    30% round;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/****** List and other Formatting ******/
+.editor-content ul,
+.journal-entry ul,
+.sheet.journal-entry ul,
+.journal-entry-page ul {
+  list-style: url("../assets/bullet.svg");
+  margin: 2px -12px;
+}
+
+.editor-content ul li li {
+  list-style: url("../assets/nested-dash.svg");
+}
+
+p + p {
+  text-indent: .05rem;
+}
+
+.journal-container {
+  max-width: 65ch;
+  padding: 1em 3em;
+  margin: 0 auto;
+}
+
+.upgrade {
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+}
+
+.upgrade-desc {
+  font-family: PicaItalic;
+  font-size: 0.9em;
+}
+
+.script-text {
+  font-family: Pica;
+  font-size: 1.1em;
+  font-style: italic;
+  margin: 5px 0px;
+}
+
+/****** Blockquote formatting ******/
+.borderimg {
+  border: 35px solid transparent;
+  padding: 0px;
+  border-image: url(../assets/bq_border.png) 60 round;
+  -webkit-column-break-inside: avoid; /* Chrome, Safari, Opera */
+  page-break-inside: avoid; /* Firefox */
+  break-inside: avoid; /* IE 10+ */
+}
+
+.side-text {
+  font-family: IntervogueBlack;
+  font-weight: 600;
+  font-style: normal;
+  text-align: center;
+  font-size: 0.9em;
+}
+
+.side-bar {
+  font-style: oblique 0deg;
+  font-family: IntervogueReg, sans-serif;
+  font-weight: 300;
+  font-size: 0.9em;
+}
+
+.inital-bar {
+  font-style: oblique 0deg;
+  font-family: IntervogueReg, sans-serif;
+  font-weight: 300;
+}
+
+.inital-bar::first-letter {
+  font-family: Eccentric;
+  font-size: 40px;
+  line-height: 26px;
+  font-weight: bold;
+  color: #412017;
+  float: left;
+  padding-top: 4px;
+  padding-right: 3px;
+  padding-left: 4px;
+}
+
+/* remove text indent from two col text lists*/
+.contents p + p{
+	text-indent: 0px;
+	margin: 0.1em 0;
+}
+
+
+blockquote {
+  margin: 10px;
+}
+
+table {
+  background: white;
+  border: none;
+  margin-bottom: 15px;
+  hyphens: auto;
+}
+
+.editor-content table thead tr {
+  background: #ffffff;
+  border-top: hidden;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+  font-family: IntervogueBlack;
+  font-weight: 700;
+  font-style: normal;
+  color: #412017;
+  text-shadow: none;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+
+.editor-content table tr:nth-child(odd) {
+  background: #e6ded6;
+  border-top: 1px solid #412017;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.editor-content table tr:nth-child(even) {
+  background: #ffffff;
+  border-top: 1px solid #412017;
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
+}
+
+.editor-content table td {
+  border-left: none;
+  border-right: none;
+  font-family: IntervogueReg;
+  font-style: normal;
+  text-align: left;
+  padding: 0.3em;
+}
+
+.editor-content th {
+  padding: 0.3em;
+  text-align: left;
+  border-top: hidden;
+  word-break: keep-all;
+}
+/***** Vaesen system overrides ******/
+.vaesen.item .upgrade .icon {
+  border: none;
+}
+
+.vaesen.item .armor .icon {
+  border: none;
+}
+.vaesen.item .weapon .icon {
+  border: none;
+}
+
+.vaesen.item .gear .icon {
+  border: none;
+}
+
+.vaesen.item .magic .icon {
+  border: none;
+}
+
+.vaesen.item .talent .icon {
+  border: none;
+}
+
+.vaesen.item .critical-injury .icon {
+  border: none;
+}
+
+.vaesen.item .condition .icon {
+  border: none;
+}
+.vaesen.item .attack .icon {
+  border: none;
+}
+
+.vaesen .wrapper:last-child {
+  margin-bottom: 20px;
+}
+
+.vaesen .sheet-tabs {
+  background-color: #f9f8f6;
+  margin-bottom: 0px;
+}
+
+.vaesen .tabs .item.active {
+  text-shadow: none;
+  border-bottom: 1px solid #412017;
+  color: #412017;
+}
+
+.vaesen .tabs .item {
+  text-shadow: none;
+  border-bottom: 1px solid #af9c8d;
+  color: #af9c8d;
+}
+
+input {
+  filter: drop-shadow(1px 1px 0px #41201766);
+}
+
+.vaesen .player,
+.vaesen .headquarter,
+.vaesen .dialog {
+  background: #f9f8f6;
+  margin: -10px;
+  margin-right: 0px;
+  padding: 8px;
+}
+
+.vaesen .portrait {
+  width: 224px;
+  height: 275px;
+  justify-content: space-between;
+}
+
+.attribute {
+  border-bottom: 1px solid #412017;
+  padding-bottom: 3px;
+}
+.vaesen .player .conditions b.condition,
+.vaesen .player .conditions div.condition {
+  flex-basis: 100%;
+  border: 1px solid #826657;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 2px;
+  background-color: #d6c9c2;
+}
+
+.vaesen .player .skills .attribute input {
+  font-family: Lin, sans-serif;
+  margin-right: 12px;
+}
+
+.vaesen .left-block {
+  width: 65%;
+  margin-bottom: 3px;
+}
+
+.vaesen .right-block {
+  width: 35%;
+  margin-bottom: 3px;
+}
+
+.vaesen .player .skills .attribute b:hover {
+  text-shadow: 0px 3px 5px #af9c8d;
+  cursor: pointer;
+}
+
+.vaesen .player .skills .skill b:hover {
+  text-shadow: 0px 3px 5px #af9c8d;
+  cursor: pointer;
+}
+
+.vaesen .heavy-border {
+  border: 2px solid #ae9d8d;
+  margin: 4px;
+  padding: 3px;
+  background-color: #ebe6e4;
+}
+
+.vaesen .second {
+  width: 470px;
+  align-content: center;
+}
+
+.vaesen .headquarter .second {
+  width: 235px;
+}
+
+.vaesen .logo img {
+  border: none;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.vaesen .logo {
+  flex-basis: 90%;
+}
+
+.vaesen .bio {
+  flex-basis: 80%;
+  margin-bottom: 2px;
+}
+
+.motivation,
+.trauma,
+.dark-secret,
+.advantage,
+.memento {
+  width: 100%;
+}
+.vaesen .res {
+  flex-basis: 20%;
+  margin-bottom: 2px;
+}
+
+.vaesen .player .header .img-frame {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 175px;
+  height: 175px;
+}
+
+.vaesen .player .header .profile-frame {
+  position: absolute;
+  z-index: 1;
+  border: none;
+}
+.vaesen .player .header .profile-img {
+  position: absolute;
+  border: 1px transparent;
+  margin-top: 5px;
+  border-radius: 50%;
+  z-index: 2;
+  padding: 15px;
+}
+
+.vaesen .player .header b,
+.vaesen .headquarter .header b {
+  font-family: Pica;
+  color: #ae9d8d;
+  margin-left: 10px;
+  font-size: 0.9em;
+  margin-bottom: 2px;
+}
+.vaesen .player .header .name input,
+.vaesen .headquarter .header .name input {
+  font-family: Albertus, sans-serif;
+  font-size: 1.2em;
+  padding: 0px;
+  margin-left: 1px;
+  margin-right: 3px;
+  flex-basis: 30%;
+  margin-bottom: 3px;
+  text-align: center;
+  height: 2.5em;
+}
+
+.vaesen .player .header .name,
+.vaesen .headquarter .header .name {
+  position: relative;
+  max-height: 3em;
+}
+
+.vaesen .player .header .name b,
+.vaesen .headquarter .header .name b {
+  position: absolute;
+  top: 0px;
+  visibility: hidden;
+}
+
+.vaesen .player .header .archetype {
+  position: relative;
+  max-height: 2em;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+.vaesen .headquarter .header .building {
+  position: relative;
+  max-height: 2em;
+  align-self: flex-end;
+  margin-bottom: 20px;
+}
+
+.skill-group div:nth-child(odd) {
+  background: #c4b8b3;
+  padding: 3px;
+}
+
+.dice-pool-list div:nth-child(odd) {
+  background: #c4b8b3;
+  padding: 3px;
+}
+
+input[type="text"]:focus {
+  box-shadow: inset 0 0 4px #b39894;
+}
+.vaesen .talent {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+
+.vaesen .magic {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+.vaesen .attack {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+
+.vaesen .gear {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+
+.vaesen .armor {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+
+.vaesen .hdqtr {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+  margin-bottom: 0px;
+}
+
+.vaesen .weapon {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+
+.vaesen .critical-injury {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+.vaesen .condition {
+  background: url(../assets/lined_paper.jpg);
+  margin: -10px;
+  padding: 8px;
+}
+.vaesen .conditions .condition {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.vaesen .critical-injuries .critical-injury {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+.vaesen .talents .talent {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+.vaesen .attacks .attack {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.vaesen .weapons .weapon {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.vaesen .magics .magic {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.vaesen .gears .gear {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.vaesen .player .note .editor,
+.vaesen .player .note .editor-content {
+  max-height: none;
+}
+
+/****** Favorite Items ******/
+.vaesen .favorite.armor {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+.vaesen .favorite.weapon {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+.vaesen .player .favorites .scrollable {
+  height: fit-content;
+}
+
+.vaesen .player .favorite.armor img.icon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.vaesen .player .favorite.weapon img.icon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+/****** Combat Tab Player Character Sheet ******/
+
+.vaesen .player .critical-injuries .scrollable {
+  height: fit-content;
+}
+
+.vaesen .player .critical-injuries .critical-injury img.icon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.vaesen .player .weapons .scrollable {
+  height: fit-content;
+}
+
+.vaesen .player .weapons .weapon img.icon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.vaesen .armors .armor {
+  background: none;
+  margin: 0px;
+  padding: 0px;
+}
+.vaesen .player .armors .scrollable {
+  height: fit-content;
+}
+
+.vaesen .player .armors .armor img.icon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+/****** Talents Tab Character Sheet ******/
+
+.vaesen .player .talents .scrollable {
+  height: fit-content;
+}
+
+.vaesen .player .talents .talent img.icon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+/****** Gear Tab Character Sheet ******/
+.vaesen .player .gears .scrollable {
+  height: fit-content;
+}
+
+.vaesen .player .gears .gear img.icon {
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+/****** Foundry Overrides ******/
+
+.app {
+  background: url(../assets/denim075.png) repeat;
+}
+body {
+  font-family: Baskerville, serif;
+
+  color: #412017;
+}
+
+.window-app .window-content {
+  background: white;
+  color: #412017;
+  padding: 4px;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: Albertus, serif;
+  border-bottom: none;
+}
+
+.chat-message {
+  background: url(../assets/lined_paper.jpg);
+}
+
+.chat-message.whisper {
+  background: url(../assets/lined_paper_whisper.jpg);
+}
+
+.chat-message.blind {
+  background: url(../assets/lined_paper_blind.jpg);
+}
+
+.chat-message .message-header {
+  color: #412017;
+  line-height: 30px;
+}
+
+.chat-message .table-draw .table-results .table-result .result-text {
+  text-align: justify;
+}
+
+.chat-message .table-draw .table-results .table-result img.result-image {
+  flex: 0 0 48px;
+  width: 48px;
+  height: 48px;
+  margin-right: 8px;
+  object-fit: cover;
+  border: none;
+}
+
+.centered-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+}
+
+.centered-image-small {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150px;
+}
+
+.centered-image-micro {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100px;
+}
+
+.centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Estilos comunes para todos los elementos de compendio en el panel lateral */
+#compendium-packs .directory-list .directory-item.compendium-pack {
+    height: 70px; /* Altura fija para cada elemento de compendio */
+    line-height: 70px; /* Centra verticalmente el texto */
+    overflow: hidden; /* Oculta cualquier contenido que se desborde */
+    transition: all 0.2s ease-in-out; /* Transición suave para efectos hover */
+    border: 1px solid rgba(0,0,0,0.5); /* Borde ligero */
+    border-radius: 5px; /* Bordes redondeados */
+    margin-bottom: 5px; /* Margen inferior para separar los elementos */
+    position: relative; /* Necesario para posicionar elementos internos */
+    /* Las propiedades background-image, -size, -position, -repeat serán aplicadas por JavaScript */
+}
+
+/* Efecto hover en los elementos de compendio */
+#compendium-packs .directory-list .directory-item.compendium-pack:hover {
+    transform: scale(1.02); /* Ligeramente más grande al pasar el ratón */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra luminosa */
+}
+
+/* Título del compendio dentro del banner */
+#compendium-packs .directory-list .directory-item.compendium-pack .pack-title {
+    font-size: 1.2em; /* Tamaño de fuente para el título */
+    font-weight: bold; /* Negrita */
+    text-align: center; /* Centra el texto */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Sombra fuerte para legibilidad */
+    color: #ff5252; /* Color de texto específico para los banners del módulo */
+    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el texto */
+    padding: 0 5px; /* Pequeño padding alrededor del texto */
+    border-radius: 3px; /* Bordes redondeados para el fondo del texto */
+    display: inline-block; /* Para que el fondo solo abarque el texto */
+    position: absolute; /* Posicionamiento absoluto para centrar */
+    top: 50%; /* Centrar verticalmente */
+    left: 50%; /* Centrar horizontalmente */
+    transform: translate(-50%, -50%); /* Ajustar para el centrado real */
+    width: calc(100% - 10px); /* Ancho para que el texto ocupe casi todo el espacio del banner */
+    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
+    z-index: 10; /* Asegura que el título esté por encima del fondo */
+}
+
+/* Icono del compendio (ocultar si se usa una imagen de banner) */
+#compendium-packs .directory-list .directory-item.compendium-pack .pack-icon {
+    display: none; /* Oculta el icono por defecto si se usa una imagen de banner */
+}
+
+/* Las reglas específicas para cada compendio se asume que son aplicadas por JavaScript. */
+/* Las líneas comentadas a continuación eran solo ejemplos y no son necesarias en el CSS. */
+/*
+#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.1-poderes"] {}
+#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.2-meritos-defectos-y-trasfondos"] {}
+#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.3-armas-armaduras-y-objetos"] {}
+#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.4-antagonistas-y-bestiario"] {}
+*/
+
+/* --- Estilos para las ventanas emergentes de compendios (las hojas) --- */
+
+/* Estilos para el div del banner dentro de la ventana de compendio */
+.window-app.compendium-directory .header-banner {
+    width: 100%; /* Asegura que ocupe todo el ancho disponible */
+    height: 150px; /* Ajusta esta altura según el tamaño deseado para tus banners */
+    overflow: hidden; /* Recorta cualquier parte de la imagen que se desborde */
+    position: relative; /* Necesario para que el contenido hijo se posicione correctamente */
+    display: flex; /* Para asegurar que el contenido se alinee */
+    align-items: center; /* Centrar verticalmente */
+    justify-content: center; /* Centrar horizontalmente */
+    background-color: #222; /* Color de fondo de respaldo */
+    /* La imagen de fondo será aplicada por JavaScript */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Oculta la imagen predeterminada de Foundry VTT */
+.window-app.compendium-directory .header-banner img {
+    display: none; /* Oculta completamente la imagen */
+}
+
+/* Estilos para el título del compendio dentro de la ventana emergente */
+.window-app.compendium-directory .header-banner .compendium-name {
+    position: absolute; /* Posiciona el nombre sobre el banner */
+    z-index: 20; /* Asegura que esté por encima de la imagen */
+    color: white; /* Color de texto claro */
+    font-size: 1.5em; /* Tamaño de fuente más grande */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Sombra para legibilidad */
+    background: rgba(0,0,0,0.5); /* Fondo semi-transparente para el texto */
+    padding: 5px 10px;
+    border-radius: 5px;
+    max-width: 90%; /* Limita el ancho para evitar desbordamiento */
+    text-align: center;
+}
+
+/* Estilos para el cuerpo de la ventana del compendio, debajo del banner */
+.window-app.compendium-directory .window-content {
+    padding: 0; /* Elimina el padding por defecto para que el contenido sea fluido */
+    background-color: #333; /* Color de fondo de respaldo */
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+}
+
+/* Estilos para el encabezado de la ventana del compendio (dentro de .window-content) */
+.window-app.compendium-directory .directory-header {
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para el encabezado de la lista */
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    color: white; /* Color de texto predeterminado */
+    position: relative;
+    z-index: 1;
+}
+
+/* Estilos para la lista de elementos dentro de la ventana del compendio */
+.window-app.compendium-directory .directory-list {
+    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para la lista */
+    padding: 10px;
+}
+
+/* Estilos para los elementos individuales dentro de la lista de la ventana del compendio */
+.window-app.compendium-directory .directory-item {
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo claro semi-transparente para los ítems */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 3px;
+    color: white; /* Color de texto por defecto para los ítems */
+}
+
+/* Efecto hover en los ítems de la lista */
+.window-app.compendium-directory .directory-item:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Scroll para imágenes grandes en popout de journal */
+.application.image-popout {
+  overflow-y: auto !important;
+}
+.application.image-popout .window-content {
+  display: flex;
+  height: 100%;
+  overflow-y: auto;
+}
+.application.image-popout .window-content img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
