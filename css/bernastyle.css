@@ -1,56 +1,3 @@
-/******************************
-/        Fonts
-******************************/
-@font-face {
-  font-family: Eccentric;
-  src: url(../fonts/EccentricStd.otf);
-}
-
-@font-face {
-  font-family: BethEllen;
-  src: url(../fonts/BethEllen-Regular.ttf);
-}
-
-@font-face {
-  font-family: Albertus;
-  src: url(../fonts/AlbertusMediumRegular.ttf);
-}
-@font-face {
-  font-family: Baskerville;
-  src: url(../fonts/LibreBaskerville-Regular.ttf);
-}
-
-@font-face {
-  font-family: Lin;
-  src: url(../fonts/LinLibertine_R.ttf);
-}
-
-@font-face {
-  font-family: IntervogueBlack;
-  src: url("../fonts/Intervogue_Black.otf");
-}
-
-@font-face {
-  font-family: IntervogueReg;
-  src: url("../fonts/Intervogue_Reg.otf");
-}
-
-@font-face {
-  font-family: PicaItalic;
-  src: url(../fonts/IMFellDoublePica-Italic.ttf);
-}
-
-/* Forzar modo claro en el editor de texto */
-.editor-content,
-.editor-content .ProseMirror {
-  background: #fff !important;
-  color: #222 !important;
-}
-@font-face {
-  font-family: Pica;
-  src: url(../fonts/IMFellDoublePica-Regular.ttf);
-}
-
 /* Logo de Pausa Cambiado y Titilante*/
 
 img.fa-spin {
@@ -73,8 +20,8 @@ img.fa-spin {
   }
   
   #pause figcaption {
-    font-family: Eccentric, sans-serif;
-    font-size: 42px;
+    font-family: Berolina, sans-serif;
+    font-size: 64px;
     text-shadow: 0px 3px 5px #e4f0f4;
     color: #222421;
   }
@@ -87,7 +34,7 @@ img.fa-spin {
     margin-left: 85px;
   }
 
-  /****** global overrides ******/
+/****** global overrides ******/
 
 /****** links and hover styles ******/
 
@@ -121,14 +68,19 @@ body {
 
 /****** Journal Entries ******/
 
+.journal-sidebar button{
+	color: #574a46;
+}
+
+
 .sheet {
   --color-border-highlight: #f1efec;
 }
 
 .sheet.journal-entry .journal-entry-content {
   background: white;
-  color: black;
   padding: 10px;
+  text-align: justify;
 }
 
 .journal-entry img {
@@ -136,7 +88,7 @@ body {
 }
 
 .journal-sheet .window-content {
-  background: rgb(0, 0, 0);
+  background: white;
   padding: 10px;
 }
 
@@ -155,20 +107,6 @@ body {
   background: none;
   color: #412017;
   border: none;
-}
-
-.journal-container p{
-  text-align: justify;
-}
-
-.journal-spacer {
-  margin: 5% 0;
-  font-weight: bold;
-  text-wrap: wrap;
-}
-
-.journal-container img{
-  margin: 5% 0;
 }
 
 .lore-text {
@@ -190,19 +128,20 @@ body {
   font-family: Lin;
 }
 .chapter-text {
-  font-family: Albertus;
+  font-family: Acme;
   font-size: 3em;
   text-align: center;
   color: #412017;
 }
 
 .two-col {
-  margin-top: 10px;
-  margin-right: 10px;
-  margin-left: 10px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0px;
+  margin: 10px 10px 0 10px;
   text-align: justify;
-  overflow: hidden;
-  overflow-wrap: break-word;
+  align-items: start;
+  overflow-wrap: anywhere;
 }
 
 .rotated-text {
@@ -222,7 +161,7 @@ body {
 .cw-text {
   text-align: left;
   font-size: 0.7em;
-  font-family: IntervogueBlack;
+  font-family: Poppins;
   font-weight: 600;
   font-style: normal;
 }
@@ -239,7 +178,7 @@ body {
   font-family: PicaItalic;
 }
 .section-head {
-  font-family: Eccentric;
+  font-family: Berolina;
   font-size: 2.5em;
   text-align: center;
   color: #412017;
@@ -288,7 +227,7 @@ body {
 /****** heading formating ******/
 .editor-content h1,
 .journal-entry-content h1 {
-  font-family: Albertus;
+  font-family: Acme;
   font-size: 3em;
   text-align: center;
   color: #412017;
@@ -297,25 +236,25 @@ body {
 
 .editor-content h2,
 .journal-entry-content h2 {
-  font-family: Eccentric;
+  font-family: Berolina;
   font-size: 2.5em;
   text-align: center;
   color: #412017;
   font-weight: 700;
   border-bottom: none;
-  margin-bottom: 5%;
+  padding: 15px 0px;
 }
 
 .editor-content h3,
 .journal-entry-content h3 {
-  font-family: Lin;
-  font-size: 1.4em;
+  font-family: Berolina;
+  font-size: 1.5em;
   text-transform: uppercase;
   color: #412017;
   font-weight: 600;
   text-align: center;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 10px;
+  padding: 10px 0px;
 }
 
 .editor-content h4,
@@ -349,12 +288,37 @@ body {
   margin: 2px -12px;
 }
 
+.sheet.journal-entry .journal-entry-content img {
+  padding: 10px 0px; 
+}
+
+.sheet.journal-entry .journal-entry-content .journal-spacer {
+  margin: 15px;
+}
+
+.sheet.journal-entry .journal-entry-content ul,
+.sheet.journal-entry .journal-entry-content ol {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.journal-container a {
+  display: inline-block;
+  max-width: 100%;
+  white-space: nowrap;
+  overflow: hidden !important;
+  text-overflow: ellipsis;
+  vertical-align: top;
+}
+
 .editor-content ul li li {
   list-style: url("../assets/nested-dash.svg");
 }
 
 p + p {
   text-indent: .05rem;
+  padding: 5px 0px;
 }
 
 .journal-container {
@@ -392,7 +356,7 @@ p + p {
 }
 
 .side-text {
-  font-family: IntervogueBlack;
+  font-family: Poppins;
   font-weight: 600;
   font-style: normal;
   text-align: center;
@@ -401,19 +365,19 @@ p + p {
 
 .side-bar {
   font-style: oblique 0deg;
-  font-family: IntervogueReg, sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 300;
   font-size: 0.9em;
 }
 
 .inital-bar {
   font-style: oblique 0deg;
-  font-family: IntervogueReg, sans-serif;
+  font-family: Poppins, sans-serif;
   font-weight: 300;
 }
 
 .inital-bar::first-letter {
-  font-family: Eccentric;
+  font-family: Berolina;
   font-size: 40px;
   line-height: 26px;
   font-weight: bold;
@@ -448,7 +412,7 @@ table {
   border-bottom: none;
   border-left: none;
   border-right: none;
-  font-family: IntervogueBlack;
+  font-family: Poppins;
   font-weight: 700;
   font-style: normal;
   color: #412017;
@@ -476,7 +440,7 @@ table {
 .editor-content table td {
   border-left: none;
   border-right: none;
-  font-family: IntervogueReg;
+  font-family: Poppins;
   font-style: normal;
   text-align: left;
   padding: 0.3em;
@@ -495,32 +459,40 @@ table {
 
 .vaesen.item .armor .icon {
   border: none;
+  border-radius: 10px;
 }
 .vaesen.item .weapon .icon {
   border: none;
+  border-radius: 10px;
 }
 
 .vaesen.item .gear .icon {
   border: none;
+  border-radius: 10px;
 }
 
 .vaesen.item .magic .icon {
   border: none;
+  border-radius: 10px;
 }
 
 .vaesen.item .talent .icon {
   border: none;
+  border-radius: 10px;
 }
 
 .vaesen.item .critical-injury .icon {
   border: none;
+  border-radius: 10px;
 }
 
 .vaesen.item .condition .icon {
   border: none;
+  border-radius: 10px;
 }
 .vaesen.item .attack .icon {
   border: none;
+  border-radius: 10px;
 }
 
 .vaesen .wrapper:last-child {
@@ -678,7 +650,7 @@ input {
 }
 .vaesen .player .header .name input,
 .vaesen .headquarter .header .name input {
-  font-family: Albertus, sans-serif;
+  font-family: Acme, sans-serif;
   font-size: 1.2em;
   padding: 0px;
   margin-left: 1px;
@@ -936,7 +908,7 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: Albertus, serif;
+  font-family: Acme, serif;
   border-bottom: none;
 }
 
@@ -970,177 +942,64 @@ h4 {
   border: none;
 }
 
-.centered-image {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 200px;
-}
-
-.centered-image-small {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 150px;
-}
-
-.centered-image-micro {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 100px;
-}
-
-.centered {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* Estilos comunes para todos los elementos de compendio en el panel lateral */
-#compendium-packs .directory-list .directory-item.compendium-pack {
-    height: 70px; /* Altura fija para cada elemento de compendio */
-    line-height: 70px; /* Centra verticalmente el texto */
-    overflow: hidden; /* Oculta cualquier contenido que se desborde */
-    transition: all 0.2s ease-in-out; /* Transición suave para efectos hover */
-    border: 1px solid rgba(0,0,0,0.5); /* Borde ligero */
-    border-radius: 5px; /* Bordes redondeados */
-    margin-bottom: 5px; /* Margen inferior para separar los elementos */
-    position: relative; /* Necesario para posicionar elementos internos */
-    /* Las propiedades background-image, -size, -position, -repeat serán aplicadas por JavaScript */
-}
-
-/* Efecto hover en los elementos de compendio */
-#compendium-packs .directory-list .directory-item.compendium-pack:hover {
-    transform: scale(1.02); /* Ligeramente más grande al pasar el ratón */
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Sombra luminosa */
-}
-
-/* Título del compendio dentro del banner */
-#compendium-packs .directory-list .directory-item.compendium-pack .pack-title {
-    font-size: 1.2em; /* Tamaño de fuente para el título */
-    font-weight: bold; /* Negrita */
-    text-align: center; /* Centra el texto */
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); /* Sombra fuerte para legibilidad */
-    color: #ff5252; /* Color de texto específico para los banners del módulo */
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo semi-transparente para el texto */
-    padding: 0 5px; /* Pequeño padding alrededor del texto */
-    border-radius: 3px; /* Bordes redondeados para el fondo del texto */
-    display: inline-block; /* Para que el fondo solo abarque el texto */
-    position: absolute; /* Posicionamiento absoluto para centrar */
-    top: 50%; /* Centrar verticalmente */
-    left: 50%; /* Centrar horizontalmente */
-    transform: translate(-50%, -50%); /* Ajustar para el centrado real */
-    width: calc(100% - 10px); /* Ancho para que el texto ocupe casi todo el espacio del banner */
-    box-sizing: border-box; /* Incluir padding y borde en el ancho total */
-    z-index: 10; /* Asegura que el título esté por encima del fondo */
-}
-
-/* Icono del compendio (ocultar si se usa una imagen de banner) */
-#compendium-packs .directory-list .directory-item.compendium-pack .pack-icon {
-    display: none; /* Oculta el icono por defecto si se usa una imagen de banner */
-}
-
-/* Las reglas específicas para cada compendio se asume que son aplicadas por JavaScript. */
-/* Las líneas comentadas a continuación eran solo ejemplos y no son necesarias en el CSS. */
-/*
-#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.1-poderes"] {}
-#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.2-meritos-defectos-y-trasfondos"] {}
-#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.3-armas-armaduras-y-objetos"] {}
-#compendium-packs .directory-list .directory-item.compendium-pack[data-pack="compendios-world-of-darknes-20th-edition-esp.4-antagonistas-y-bestiario"] {}
-*/
-
-/* --- Estilos para las ventanas emergentes de compendios (las hojas) --- */
-
-/* Estilos para el div del banner dentro de la ventana de compendio */
-.window-app.compendium-directory .header-banner {
-    width: 100%; /* Asegura que ocupe todo el ancho disponible */
-    height: 150px; /* Ajusta esta altura según el tamaño deseado para tus banners */
-    overflow: hidden; /* Recorta cualquier parte de la imagen que se desborde */
-    position: relative; /* Necesario para que el contenido hijo se posicione correctamente */
-    display: flex; /* Para asegurar que el contenido se alinee */
-    align-items: center; /* Centrar verticalmente */
-    justify-content: center; /* Centrar horizontalmente */
-    background-color: #222; /* Color de fondo de respaldo */
-    /* La imagen de fondo será aplicada por JavaScript */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-/* Oculta la imagen predeterminada de Foundry VTT */
-.window-app.compendium-directory .header-banner img {
-    display: none; /* Oculta completamente la imagen */
-}
-
-/* Estilos para el título del compendio dentro de la ventana emergente */
-.window-app.compendium-directory .header-banner .compendium-name {
-    position: absolute; /* Posiciona el nombre sobre el banner */
-    z-index: 20; /* Asegura que esté por encima de la imagen */
-    color: white; /* Color de texto claro */
-    font-size: 1.5em; /* Tamaño de fuente más grande */
-    font-weight: bold;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Sombra para legibilidad */
-    background: rgba(0,0,0,0.5); /* Fondo semi-transparente para el texto */
-    padding: 5px 10px;
-    border-radius: 5px;
-    max-width: 90%; /* Limita el ancho para evitar desbordamiento */
-    text-align: center;
-}
-
-/* Estilos para el cuerpo de la ventana del compendio, debajo del banner */
-.window-app.compendium-directory .window-content {
-    padding: 0; /* Elimina el padding por defecto para que el contenido sea fluido */
-    background-color: #333; /* Color de fondo de respaldo */
-    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
-}
-
-/* Estilos para el encabezado de la ventana del compendio (dentro de .window-content) */
-.window-app.compendium-directory .directory-header {
-    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para el encabezado de la lista */
-    padding: 10px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    color: white; /* Color de texto predeterminado */
-    position: relative;
-    z-index: 1;
-}
-
-/* Estilos para la lista de elementos dentro de la ventana del compendio */
-.window-app.compendium-directory .directory-list {
-    background: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente para la lista */
-    padding: 10px;
-}
-
-/* Estilos para los elementos individuales dentro de la lista de la ventana del compendio */
-.window-app.compendium-directory .directory-item {
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo claro semi-transparente para los ítems */
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    margin-bottom: 5px;
-    padding: 8px;
-    border-radius: 3px;
-    color: white; /* Color de texto por defecto para los ítems */
-}
-
-/* Efecto hover en los ítems de la lista */
-.window-app.compendium-directory .directory-item:hover {
-    background-color: rgba(255, 255, 255, 0.2);
-}
-
-/* Scroll para imágenes grandes en popout de journal */
-.application.image-popout {
-  overflow-y: auto !important;
-}
-.application.image-popout .window-content {
-  display: flex;
-  height: 100%;
-  overflow-y: auto;
-}
-.application.image-popout .window-content img {
+.toc-book {
+  width: 100%;
   max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  display: block;
+  margin: 0 auto;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  box-sizing: border-box;
 }
 
+.toc-section {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 0 1.2rem 0;
+  box-sizing: border-box;
+}
+
+.toc-section h3 {
+  margin: 0 0 15px 0;
+  text-align: left;
+  font-family: Acme, serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #412017;
+  border-bottom: 1px solid rgba(65, 32, 23, 0.18);
+  padding-bottom: 0.35rem;
+}
+
+.toc-section ul {
+  list-style: disc;
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 1.2rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.toc-section li {
+  margin: 0;
+  padding: 0.2rem 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.toc-section li a,
+.toc-section li a.entity-link {
+  display: inline;
+  max-width: 100%;
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}

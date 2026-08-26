@@ -3,8 +3,9 @@
   "title": "La Canción de la Noche Perpetua",
   "version": "0.1.2",
   "compatibility": {
-    "minimum": "11",
-    "verified": "13"
+    "minimum": "13",
+    "verified": "14",
+    "maximum": "14"
   },
   "relationships": {
     "systems": [
@@ -13,8 +14,7 @@
         "type": "system",
         "compatibility": {}
       }
-    ],
-    "recommends": []
+    ]
   },
   "description": "<p>¡Sumérgete en el folclore nórdico y los misterios sobrenaturales con los compendios esenciales de Vaesen, completamente en español para Foundry VTT!</p>",
   "authors": [
@@ -34,7 +34,7 @@
     },
     {
       "src": "css/journals.css"
-    }	
+    }
   ],
   "packs": [
     {
@@ -46,7 +46,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     },
     {
       "name": "armas-armaduras-y-objetos",
@@ -57,7 +58,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     },
     {
       "name": "magia-talentos-y-heridas-criticas",
@@ -68,7 +70,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     },
     {
       "name": "tablas-de-tiradas",
@@ -79,7 +82,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     },
     {
       "name": "enemigos",
@@ -90,7 +94,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     },
     {
       "name": "aventuras",
@@ -101,7 +106,8 @@
       "ownership": {
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
-      }
+      },
+      "flags": {}
     },
     {
       "name": "mapas",
@@ -112,10 +118,12 @@
         "PLAYER": "OBSERVER",
         "ASSISTANT": "OWNER"
       },
-      "system": "vaesen"
+      "system": "vaesen",
+      "flags": {}
     }
   ],
   "url": "https://raw.githubusercontent.com/bernardoclon/compendios-vaesen-esp",
   "manifest": "https://raw.githubusercontent.com/bernardoclon/compendios-vaesen-esp/refs/heads/main/module.json",
-  "download": "https://github.com/bernardoclon/compendios-vaesen-esp/archive/refs/tags/V1-2.zip"
+  "download": "https://github.com/bernardoclon/compendios-vaesen-esp/archive/refs/tags/V1-2.zip",
+  "flags": {}
 }

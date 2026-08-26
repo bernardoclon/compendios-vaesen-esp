@@ -1,0 +1,5 @@
+2026/08/26-06:07:21.703 fbc Recovering log #998
+2026/08/26-06:07:21.705 fbc Level-0 table #1000: started
+2026/08/26-06:07:21.715 fbc Level-0 table #1000: 518563 bytes OK
+2026/08/26-06:07:21.719 fbc Delete type=0 #998
+2026/08/26-06:07:21.720 fbc Delete type=3 #997

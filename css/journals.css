@@ -28,11 +28,10 @@
   display: none !important;
 }
 .journal-entry:not(.minimized) .window-header * {
-  text-shadow: 0 0 0.5em black;
   text-align: center;
 }
 .journal-entry:not(.minimized) .window-header .window-title {
-    font-family: Albertus;
+    font-family: Eccentric;
 }
 .journal-entry:not(.minimized) .window-header *:not(.window-title):hover {
   text-shadow: 0 0 0.5em var(--color-shadow-primary);
@@ -275,6 +274,7 @@
 
 .journal-sheet.journal-entry-page .window-content .editor .editor-container .editor-content{
   padding: 5%;
+  background-color: #ffffff;
 }
 
 .journal-sheet.journal-entry-page .window-content .editor .editor-menu button{

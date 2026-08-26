@@ -68,7 +68,7 @@ Hooks.once('ready', async function() {
                   // Solo procesar si el nodo es un elemento HTML
                   if (node.nodeType === Node.ELEMENT_NODE) {
                       // Verificar si el nodo añadido es una ventana emergente de compendio o la contiene
-                      const popoutSection = node.matches('section[id^="compendium-"].sidebar-popout') ? node : node.querySelector('section[id^="compendium-"].sidebar-popout');
+                      const popoutSection = node.matches('section[id^="Compendium-"].sidebar-popout') ? node : node.querySelector('section[id^="Compendium-"].sidebar-popout');
                       
                       // Si detectamos una sección de ventana emergente
                       if (popoutSection) {
@@ -144,44 +144,55 @@ function applyCompendiumBanner(popoutSection) {
     const compendiumThemesMap = new Map(compendiumBanners.map(theme => [theme.dataPack, theme.bannerImage]));
 
     // Extraer el dataPack ID del ID del elemento HTML de la ventana emergente
-    // La ID es "compendium-MODULE_ID_PACK_NAME"
-    const fullIdString = popoutId.replace('compendium-', '');
-    const idParts = fullIdString.split('_', 2); // Dividir solo por el primer '_' para separar el módulo del nombre del pack
-
+    // La ID es "Compendium-MODULE_ID_PACK_NAME" (ej: "Compendium-compendios-vaesen-esp_vaesen")
+    const fullIdString = popoutId.replace('Compendium-', '');
+    
+    // Buscar el último guion bajo para separar el MODULE_ID del PACK_NAME
+    const lastUnderscoreIndex = fullIdString.lastIndexOf('_');
+    
     let dataPackIdForPopout;
-    if (idParts.length === 2) {
-        dataPackIdForPopout = `${idParts[0]}.${idParts[1]}`;
+    if (lastUnderscoreIndex !== -1) {
+        const moduleId = fullIdString.substring(0, lastUnderscoreIndex);
+        const packName = fullIdString.substring(lastUnderscoreIndex + 1);
+        dataPackIdForPopout = `${moduleId}.${packName}`;
     } else {
-        // Si no se puede dividir, usar el ID completo o un valor por defecto si es necesario
-        dataPackIdForPopout = fullIdString.replace(/_/g, '.'); // Fallback para reemplazar todos los _ con .
+        // Fallback si no hay guion bajo
+        dataPackIdForPopout = fullIdString.replace(/_/g, '.');
     }
     
     console.log(`${MODULE_ID} | DEBUG: applyCompendiumBanner: dataPackIdFromElementId para pop-out: ${dataPackIdForPopout}`);
+    console.log(`${MODULE_ID} | DEBUG: Paquetes disponibles:`, compendiumBanners.map(b => b.dataPack).join(', '));
 
     const customBannerImage = compendiumThemesMap.get(dataPackIdForPopout);
     
     if (customBannerImage) {
-      const mainBannerImg = popoutSection.querySelector('.header-banner img');
       const headerBannerDiv = popoutSection.querySelector('.header-banner');
+      console.log(`${MODULE_ID} | DEBUG: .header-banner encontrado: ${headerBannerDiv ? 'SÍ' : 'NO'}`);
 
-      if (headerBannerDiv) { // Solo necesitamos el div del banner, la imagen la eliminaremos
+      if (headerBannerDiv) {
         // Eliminar la imagen por defecto de Foundry VTT si existe
+        const mainBannerImg = headerBannerDiv.querySelector('img');
         if (mainBannerImg) {
             mainBannerImg.remove(); 
             console.log(`${MODULE_ID} | DEBUG: Imagen por defecto eliminada para ${popoutId}.`);
         }
 
-        // --- NUEVA ESTRATEGIA: INYECTAR CSS DINÁMICAMENTE ---
-        // Primero, eliminar cualquier estilo previamente inyectado para esta ventana emergente
+        // === APLICAR ESTILOS DIRECTAMENTE AL ELEMENTO ===
+        console.log(`${MODULE_ID} | DEBUG: Aplicando estilos inline directamente...`);
+        headerBannerDiv.style.setProperty('background-image', `url('${customBannerImage}')`, 'important');
+        headerBannerDiv.style.setProperty('background-size', 'cover', 'important');
+        headerBannerDiv.style.setProperty('background-position', 'center', 'important');
+        headerBannerDiv.style.setProperty('background-repeat', 'no-repeat', 'important');
+        console.log(`${MODULE_ID} | DEBUG: ✓ Estilos inline aplicados. Background: ${headerBannerDiv.style.getPropertyValue('background-image')}`);
+
+        // === INYECTAR CSS GLOBAL COMO FALLBACK ===
         if (injectedStyles.has(popoutId)) {
             injectedStyles.get(popoutId).remove();
             injectedStyles.delete(popoutId);
-            console.log(`${MODULE_ID} | DEBUG: Estilo CSS inyectado existente eliminado para ${popoutId}.`);
         }
 
-        // Crear un nuevo elemento <style> y adjuntarlo al <head>
         const styleElement = document.createElement('style');
-        styleElement.id = `compendium-banner-style-${popoutId}`; // ID único para el elemento <style>
+        styleElement.id = `compendium-banner-style-${popoutId}`;
         styleElement.textContent = `
             #${popoutId} .header-banner {
                 background-image: url('${customBannerImage}') !important;
@@ -190,60 +201,41 @@ function applyCompendiumBanner(popoutSection) {
                 background-repeat: no-repeat !important;
             }
             #${popoutId} .header-banner img {
-                display: none !important; /* Asegurarse de que si se reinserta, se oculta */
+                display: none !important;
             }
         `;
         document.head.appendChild(styleElement);
-        injectedStyles.set(popoutId, styleElement); // Almacenar referencia al elemento <style>
-        console.log(`${MODULE_ID} | DEBUG: Estilo CSS inyectado para ${popoutId}: ${customBannerImage}`);
+        injectedStyles.set(popoutId, styleElement);
+        console.log(`${MODULE_ID} | DEBUG: ✓ CSS global inyectado`);
 
-
-        // --- LÓGICA DEL MUTATION OBSERVER REFINADA ---
-        // Si ya hay un observer para este popout, desconectarlo primero para evitar duplicados
+        // === CONFIGURAR MUTATION OBSERVER ===
         if (bannerObservers.has(popoutId)) {
             bannerObservers.get(popoutId).disconnect();
             bannerObservers.delete(popoutId);
-            console.log(`${MODULE_ID} | DEBUG: Observer existente desconectado para ${popoutId}.`);
         }
 
-        // Crear y configurar un nuevo MutationObserver para este div de banner específico
         const observer = new MutationObserver((mutationsList) => {
-            let reapplyNeeded = false;
             for (const mutation of mutationsList) {
-                // Observar si se añaden o eliminan nodos hijos (como si reaparece la imagen por defecto)
-                // o si los atributos (incluido el 'style') del .header-banner cambian.
-                if (mutation.type === 'childList' || (mutation.type === 'attributes' && mutation.attributeName === 'style')) {
-                    const currentBgImage = headerBannerDiv.style.getPropertyValue('background-image');
-                    const imgExists = headerBannerDiv.querySelector('img');
-
-                    // Si nuestro background-image ya no está aplicado correctamente
-                    // o si Foundry reinsertó una imagen 'img' dentro del .header-banner
-                    if (!currentBgImage.includes(customBannerImage) || imgExists) {
-                        reapplyNeeded = true;
-                        break; 
+                if (mutation.type === 'childList') {
+                    const imgInBanner = headerBannerDiv.querySelector('img');
+                    if (imgInBanner) {
+                        console.log(`${MODULE_ID} | DEBUG: Observer detectó imagen reinsertada, eliminando...`);
+                        imgInBanner.remove();
                     }
                 }
             }
-
-            if (reapplyNeeded) {
-                console.log(`${MODULE_ID} | DEBUG: Observer detectó cambio de banner para ${popoutId}. Re-aplicando.`);
-                // Desconectar este observer *temporalmente* para evitar bucles infinitos durante la re-aplicación
-                observer.disconnect();
-                // Re-aplicar el banner, lo cual también re-configurará el nuevo estilo y observer
-                // Envuelto en setTimeout para dar tiempo a Foundry a estabilizar el DOM antes de la re-aplicación forzada.
-                setTimeout(() => applyCompendiumBanner(popoutSection), 50); 
-            }
         });
 
-        // Observar cambios en atributos (especialmente 'style') y en los hijos directos del div.header-banner
-        observer.observe(headerBannerDiv, { attributes: true, childList: true, subtree: false });
-        bannerObservers.set(popoutId, observer); // Almacenar el observer para este popout
+        // Observar cambios en los hijos directos del div.header-banner
+        observer.observe(headerBannerDiv, { childList: true, subtree: false });
+        bannerObservers.set(popoutId, observer);
+        console.log(`${MODULE_ID} | DEBUG: ✓ Mutation Observer configurado`);
         
       } else {
-        console.log(`${MODULE_ID} | applyCompendiumBanner: No se encontró '.header-banner' en la ventana emergente para ${dataPackIdForPopout}.`);
+        console.error(`${MODULE_ID} | ❌ ERROR: No se encontró '.header-banner' en ${popoutId}`);
       }
     } else {
-      console.log(`${MODULE_ID} | applyCompendiumBanner: No hay banner personalizado definido para la ventana emergente: ${dataPackIdForPopout}.`);
+      console.error(`${MODULE_ID} | ❌ ERROR: No hay banner para ${dataPackIdForPopout}`);
     }
 }
 
@@ -274,7 +266,7 @@ Hooks.on("renderApplication", (app, html, data) => {
     const popoutSection = app.element?.[0];
 
     // Verificamos si la aplicación renderizada es una ventana emergente de compendio.
-    if (popoutSection && popoutSection.id.startsWith('compendium-') && popoutSection.classList.contains('sidebar-popout')) {
+    if (popoutSection && popoutSection.id.startsWith('Compendium-') && popoutSection.classList.contains('sidebar-popout')) {
         const popoutId = popoutSection.id;
         console.log(`${MODULE_ID} | DEBUG: renderApplication hook DETECTADO para ID: ${popoutId}.`);
 
