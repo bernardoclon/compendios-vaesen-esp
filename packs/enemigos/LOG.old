@@ -1,8 +1,0 @@
-2026/09/05-11:16:31.431 1e3c Recovering log #1144
-2026/09/05-11:16:31.435 1e3c Delete type=0 #1144
-2026/09/05-11:16:31.435 1e3c Delete type=3 #1142
-2026/09/05-11:45:52.436 c28 Level-0 table #1149: started
-2026/09/05-11:45:52.436 c28 Level-0 table #1149: 0 bytes OK
-2026/09/05-11:45:52.438 c28 Delete type=0 #1147
-2026/09/05-11:45:52.444 c28 Manual compaction at level-0 from '!actors!049prVLhWD0nd5Db' @ 72057594037927935 : 1 .. '!folders!dhKLxtVzPdJEH6mC' @ 0 : 0; will stop at (end)
-2026/09/05-11:45:52.444 c28 Manual compaction at level-1 from '!actors!049prVLhWD0nd5Db' @ 72057594037927935 : 1 .. '!folders!dhKLxtVzPdJEH6mC' @ 0 : 0; will stop at (end)

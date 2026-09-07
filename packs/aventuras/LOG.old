@@ -1,8 +1,0 @@
-2026/09/05-11:16:31.438 1e3c Recovering log #1073
-2026/09/05-11:16:31.442 1e3c Delete type=0 #1073
-2026/09/05-11:16:31.442 1e3c Delete type=3 #1071
-2026/09/05-11:45:52.475 c28 Level-0 table #1079: started
-2026/09/05-11:45:52.475 c28 Level-0 table #1079: 0 bytes OK
-2026/09/05-11:45:52.478 c28 Delete type=0 #1077
-2026/09/05-11:45:52.499 c28 Manual compaction at level-0 from '!adventures!8k9NKigA2t6jYjuA' @ 72057594037927935 : 1 .. '!adventures!mxmIRvsmno23ovHR' @ 0 : 0; will stop at (end)
-2026/09/05-11:45:52.499 c28 Manual compaction at level-1 from '!adventures!8k9NKigA2t6jYjuA' @ 72057594037927935 : 1 .. '!adventures!mxmIRvsmno23ovHR' @ 0 : 0; will stop at (end)
