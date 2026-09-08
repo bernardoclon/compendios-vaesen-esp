@@ -1,7 +1,0 @@
-2026/09/07-17:08:20.602 1d88 Recovering log #1609
-2026/09/07-17:08:20.608 1d88 Delete type=0 #1609
-2026/09/07-17:08:20.608 1d88 Delete type=3 #1607
-2026/09/07-17:52:34.947 1f34 Level-0 table #1614: started
-2026/09/07-17:52:34.947 1f34 Level-0 table #1614: 0 bytes OK
-2026/09/07-17:52:34.948 1f34 Delete type=0 #1612
-2026/09/07-17:52:34.953 1f34 Manual compaction at level-0 from '!tables!FRSG97qT44t0Bszw' @ 72057594037927935 : 1 .. '!tables.results!vENw7M3K3nSOYbp5.zc1ujWN2rJyEMkvu' @ 0 : 0; will stop at (end)
