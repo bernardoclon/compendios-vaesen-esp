@@ -1,0 +1,8 @@
+2026/09/07-17:54:58.969 21fc Recovering log #1110
+2026/09/07-17:54:58.973 21fc Delete type=0 #1110
+2026/09/07-17:54:58.973 21fc Delete type=3 #1108
+2026/09/07-18:44:45.939 1f34 Level-0 table #1116: started
+2026/09/07-18:44:45.939 1f34 Level-0 table #1116: 0 bytes OK
+2026/09/07-18:44:45.942 1f34 Delete type=0 #1114
+2026/09/07-18:44:45.954 1f34 Manual compaction at level-0 from '!adventures!8k9NKigA2t6jYjuA' @ 72057594037927935 : 1 .. '!folders!vW2Qxu4xONWTRJ2d' @ 0 : 0; will stop at (end)
+2026/09/07-18:44:45.969 1f34 Manual compaction at level-1 from '!adventures!8k9NKigA2t6jYjuA' @ 72057594037927935 : 1 .. '!folders!vW2Qxu4xONWTRJ2d' @ 0 : 0; will stop at (end)
