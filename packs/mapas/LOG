@@ -1,0 +1,8 @@
+2026/09/09-20:08:47.401 c8c Recovering log #1013
+2026/09/09-20:08:47.406 c8c Delete type=0 #1013
+2026/09/09-20:08:47.406 c8c Delete type=3 #1011
+2026/09/09-20:13:54.149 1824 Level-0 table #1018: started
+2026/09/09-20:13:54.149 1824 Level-0 table #1018: 0 bytes OK
+2026/09/09-20:13:54.151 1824 Delete type=0 #1016
+2026/09/09-20:13:54.163 1824 Manual compaction at level-0 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes.levels!tBlCJMAvCQmE0Ymo.defaultLevel0000' @ 0 : 0; will stop at (end)
+2026/09/09-20:13:54.163 1824 Manual compaction at level-1 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes.levels!tBlCJMAvCQmE0Ymo.defaultLevel0000' @ 0 : 0; will stop at (end)

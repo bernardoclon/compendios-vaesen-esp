@@ -1,0 +1,7 @@
+2026/09/09-19:17:59.375 c8c Recovering log #1649
+2026/09/09-19:17:59.379 c8c Delete type=0 #1649
+2026/09/09-19:17:59.379 c8c Delete type=3 #1647
+2026/09/09-20:08:43.438 1824 Level-0 table #1654: started
+2026/09/09-20:08:43.438 1824 Level-0 table #1654: 0 bytes OK
+2026/09/09-20:08:43.441 1824 Delete type=0 #1652
+2026/09/09-20:08:43.447 1824 Manual compaction at level-0 from '!actors!0T7pTtk8Elaj2qzT' @ 72057594037927935 : 1 .. '!actors.items!yC8uz7xlYjDjUriA.uvn2EUDwfSpLHYKf' @ 0 : 0; will stop at (end)
