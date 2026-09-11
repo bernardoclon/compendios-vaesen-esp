@@ -1,8 +1,0 @@
-2026/09/10-17:05:15.311 106c Recovering log #1228
-2026/09/10-17:05:15.316 106c Delete type=0 #1228
-2026/09/10-17:05:15.316 106c Delete type=3 #1226
-2026/09/10-20:08:01.886 dfc Level-0 table #1233: started
-2026/09/10-20:08:01.886 dfc Level-0 table #1233: 0 bytes OK
-2026/09/10-20:08:01.888 dfc Delete type=0 #1231
-2026/09/10-20:08:01.897 dfc Manual compaction at level-0 from '!actors!049prVLhWD0nd5Db' @ 72057594037927935 : 1 .. '!folders!dhKLxtVzPdJEH6mC' @ 0 : 0; will stop at (end)
-2026/09/10-20:08:01.906 dfc Manual compaction at level-1 from '!actors!049prVLhWD0nd5Db' @ 72057594037927935 : 1 .. '!folders!dhKLxtVzPdJEH6mC' @ 0 : 0; will stop at (end)

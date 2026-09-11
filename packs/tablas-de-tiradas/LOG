@@ -1,7 +1,0 @@
-2026/09/10-17:05:15.291 ffc Recovering log #1665
-2026/09/10-17:05:15.295 ffc Delete type=0 #1665
-2026/09/10-17:05:15.295 ffc Delete type=3 #1663
-2026/09/10-20:08:01.879 dfc Level-0 table #1670: started
-2026/09/10-20:08:01.879 dfc Level-0 table #1670: 0 bytes OK
-2026/09/10-20:08:01.881 dfc Delete type=0 #1668
-2026/09/10-20:08:01.883 dfc Manual compaction at level-0 from '!tables!FRSG97qT44t0Bszw' @ 72057594037927935 : 1 .. '!tables.results!vENw7M3K3nSOYbp5.zc1ujWN2rJyEMkvu' @ 0 : 0; will stop at (end)
