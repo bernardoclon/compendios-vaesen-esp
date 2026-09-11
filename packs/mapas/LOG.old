@@ -1,8 +1,0 @@
-2026/09/10-17:05:15.360 106c Recovering log #1045
-2026/09/10-17:05:15.364 106c Delete type=0 #1045
-2026/09/10-17:05:15.365 106c Delete type=3 #1043
-2026/09/10-20:08:01.884 dfc Level-0 table #1050: started
-2026/09/10-20:08:01.884 dfc Level-0 table #1050: 0 bytes OK
-2026/09/10-20:08:01.886 dfc Delete type=0 #1048
-2026/09/10-20:08:01.897 dfc Manual compaction at level-0 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes.levels!tBlCJMAvCQmE0Ymo.defaultLevel0000' @ 0 : 0; will stop at (end)
-2026/09/10-20:08:01.906 dfc Manual compaction at level-1 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes.levels!tBlCJMAvCQmE0Ymo.defaultLevel0000' @ 0 : 0; will stop at (end)
