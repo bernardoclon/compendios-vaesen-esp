@@ -1,0 +1,8 @@
+2026/09/10-20:10:06.256 1dac Recovering log #1049
+2026/09/10-20:10:06.261 1dac Delete type=0 #1049
+2026/09/10-20:10:06.261 1dac Delete type=3 #1047
+2026/09/10-20:47:48.501 40e4 Level-0 table #1054: started
+2026/09/10-20:47:48.501 40e4 Level-0 table #1054: 0 bytes OK
+2026/09/10-20:47:48.503 40e4 Delete type=0 #1052
+2026/09/10-20:47:48.526 40e4 Manual compaction at level-0 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes.levels!tBlCJMAvCQmE0Ymo.defaultLevel0000' @ 0 : 0; will stop at (end)
+2026/09/10-20:47:48.526 40e4 Manual compaction at level-1 from '!scenes!Oh0cNn3RtScuwoUa' @ 72057594037927935 : 1 .. '!scenes.levels!tBlCJMAvCQmE0Ymo.defaultLevel0000' @ 0 : 0; will stop at (end)

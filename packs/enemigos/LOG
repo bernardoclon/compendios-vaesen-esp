@@ -1,0 +1,8 @@
+2026/09/10-20:10:06.225 1dac Recovering log #1232
+2026/09/10-20:10:06.229 1dac Delete type=0 #1232
+2026/09/10-20:10:06.229 1dac Delete type=3 #1230
+2026/09/10-20:47:48.505 40e4 Level-0 table #1237: started
+2026/09/10-20:47:48.505 40e4 Level-0 table #1237: 0 bytes OK
+2026/09/10-20:47:48.507 40e4 Delete type=0 #1235
+2026/09/10-20:47:48.526 40e4 Manual compaction at level-0 from '!actors!049prVLhWD0nd5Db' @ 72057594037927935 : 1 .. '!folders!dhKLxtVzPdJEH6mC' @ 0 : 0; will stop at (end)
+2026/09/10-20:47:48.526 40e4 Manual compaction at level-1 from '!actors!049prVLhWD0nd5Db' @ 72057594037927935 : 1 .. '!folders!dhKLxtVzPdJEH6mC' @ 0 : 0; will stop at (end)
